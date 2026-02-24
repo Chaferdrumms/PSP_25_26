@@ -1,0 +1,45 @@
+[2026-02-19 01:37:16] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 20
+[2026-02-19 01:37:18] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 60
+[2026-02-19 01:37:19] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 10
+[2026-02-19 01:37:20] PEDIDO RECHAZADO (Producto no existe) - Almacén: /127.0.0.1 - Producto: productoInexistente - Cantidad: 5
+[2026-02-19 01:37:21] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 100
+[2026-02-19 01:43:46] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 20
+[2026-02-19 01:43:47] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 60
+[2026-02-19 01:43:48] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 10
+[2026-02-19 01:43:48] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 20
+[2026-02-19 01:43:49] PEDIDO RECHAZADO (Producto no existe) - Almacén: /127.0.0.1 - Producto: productoInexistente - Cantidad: 5
+[2026-02-19 01:43:49] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 60
+[2026-02-19 01:43:50] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 100
+[2026-02-19 01:43:50] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 10
+[2026-02-19 01:43:51] PEDIDO RECHAZADO (Producto no existe) - Almacén: /127.0.0.1 - Producto: productoInexistente - Cantidad: 5
+[2026-02-19 01:43:52] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 100
+[2026-02-24 21:30:43] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 1
+[2026-02-24 21:30:43] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 11
+[2026-02-24 21:30:44] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto4 - Cantidad: 9
+[2026-02-24 21:30:44] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 6
+[2026-02-24 21:30:44] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 9
+[2026-02-24 21:30:45] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto4 - Cantidad: 9
+[2026-02-24 21:30:45] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 10
+[2026-02-24 21:30:45] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 9
+[2026-02-24 21:30:46] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 15
+[2026-02-24 21:30:46] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 4
+[2026-02-24 21:30:46] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 13
+[2026-02-24 21:30:47] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto4 - Cantidad: 1
+[2026-02-24 21:30:47] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 12
+[2026-02-24 21:30:47] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 16
+[2026-02-24 21:30:48] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 14
+[2026-02-24 21:30:48] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 19
+[2026-02-24 21:30:49] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 3
+[2026-02-24 21:30:49] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 9
+[2026-02-24 21:30:49] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 11
+[2026-02-24 21:30:50] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 11
+[2026-02-24 21:30:50] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 17
+[2026-02-24 21:30:50] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto2 - Cantidad: 16
+[2026-02-24 21:30:51] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto1 - Cantidad: 4
+[2026-02-24 21:30:51] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 8
+[2026-02-24 21:30:51] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 10
+[2026-02-24 21:30:52] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 18
+[2026-02-24 21:30:52] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 11
+[2026-02-24 21:30:52] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 12
+[2026-02-24 21:30:53] PEDIDO ACEPTADO - Almacén: /127.0.0.1 - Producto: producto3 - Cantidad: 12
+[2026-02-24 21:30:53] PEDIDO RECHAZADO (Stock insuficiente) - Almacén: /127.0.0.1 - Producto: producto5 - Cantidad: 12
