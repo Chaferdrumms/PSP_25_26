@@ -23,7 +23,7 @@ public class ManejarPedidos implements Runnable {
         	while((linea = entrada.readLine()) != null) {
         		String[] datos = linea.split(",");
                 if (datos.length != 2) {
-                	System.err.println("Formato inválido. Use: producto,cantidad");
+                	salida.println("Formato inválido. Use: producto,cantidad");
                     continue;
                 }
                 String producto = datos[0].trim();
@@ -42,9 +42,16 @@ public class ManejarPedidos implements Runnable {
         			salida.println("Pedido rechazado: Stock insuficiente.");
         		}
         	}
-        	socket.close();
         } catch (IOException e) {
-            System.err.println("Error en el servidor: " + e.getMessage());
-        }
+            System.err.println("Cliente " + socket.getInetAddress() + " desconectado: " + e.getMessage());
+        } finally {
+            try {
+                if (socket != null && !socket.isClosed()) {
+                    socket.close(); 
+                }
+            } catch (IOException e) {
+                System.err.println("Error al cerrar socket: " + e.getMessage()); 
+            }
+        }    
 	}
 }

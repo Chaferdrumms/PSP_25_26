@@ -12,9 +12,9 @@ import java.util.Properties;
 public class Servidor {
 	
 	private static final int PUERTO = 12345;
-	private static final String CONFIG_STOCK = "unidades/unidad4/config_stock.properties";
+	private static final String CONFIG_STOCK = "config_stock.properties";
 	private static HashMap<String, Integer> stock = new HashMap<>();
-	private static final String LOG = "unidades/unidad4/pedidos.log";
+	private static final String LOG = "pedidos.log";
 	
 	public static void main(String[] args) {
 		//Cargo los datos del properties
@@ -67,25 +67,41 @@ public class Servidor {
         }			
 	}
 	
-	//Metodo sincronizado para procesar las peticiones al stock de los clientes
+	//Método que solo valida si los datos tienen sentido
+	private static boolean validarPedido(String producto, int cantidad) {
+	    //El producto no puede ser nulo/vacío y la cantidad debe ser positiva 
+	    return producto != null && !producto.trim().isEmpty() && cantidad > 0;
+	}
+
+	//Método principal coordinado (Sincronizado)
 	public static synchronized boolean procesarPedido(String producto, int cantidad, String ip) {
-		if (!stock.containsKey(producto)) {
-	        escribirLog(ip, producto, cantidad, "RECHAZADO (Producto no existe)");
+	    //Valido la entrada
+	    if (!validarPedido(producto, cantidad)) {
+	        escribirLog(ip, producto, cantidad, "RECHAZADO (Datos inválidos)");
 	        return false;
 	    }
-		int stockActual = stock.get(producto);
-		
-		if (stockActual >= cantidad) {
-	        // ACEPTADO
-	        stock.put(producto, stockActual - cantidad); // Actualizo memoria
-	        
+
+	    //Compruebo existencia
+	    if (!stock.containsKey(producto)) {
+	        escribirLog(ip, producto, cantidad, "RECHAZADO (Producto no existe)"); 
+	        return false;
+	    }
+
+	    //Delego la modificación del stock 
+	    return ejecutarTransaccion(producto, cantidad, ip);
+	}
+
+	//Método que solo toca el stock y los archivos
+	private static boolean ejecutarTransaccion(String producto, int cantidad, String ip) {
+	    int stockActual = stock.get(producto);
+
+	    if (stockActual >= cantidad) {
+	        stock.put(producto, stockActual - cantidad); 
 	        actualizarStock(); 
-	        escribirLog(ip, producto, cantidad, "ACEPTADO"); 
-	        
+	        escribirLog(ip, producto, cantidad, "ACEPTADO");
 	        return true;
 	    } else {
-	        // RECHAZADO
-	        escribirLog(ip, producto, cantidad, "RECHAZADO (Stock insuficiente)");
+	        escribirLog(ip, producto, cantidad, "RECHAZADO (Stock insuficiente)"); 
 	        return false;
 	    }
 	}
@@ -105,3 +121,4 @@ public class Servidor {
         }
     }
 }
+

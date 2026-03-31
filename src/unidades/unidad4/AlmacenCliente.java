@@ -22,7 +22,7 @@ public class AlmacenCliente {
 
             System.out.println("Conectado al servidor de pedidos.");
             
-            for (int i = 0; i < 10; i++) {
+            while (true) {
             	String producto = productos[r.nextInt(productos.length)];
             	int cantidad = r.nextInt(20) + 1;
             	
@@ -33,15 +33,25 @@ public class AlmacenCliente {
             	
             	//Lee la respuesta del servidor
             	String respuesta = entrada.readLine();
+            	
+            	//Si el servidor se apaga o hay error, la respuesta será null
+                if (respuesta == null) {
+                    System.out.println("El servidor ha cerrado la conexión.");
+                    break; 
+                }
+            	
                 System.out.println("Respuesta del servidor: " + respuesta);
 
-                Thread.sleep(1000); 
+                Thread.sleep(1000 + r.nextInt(2000)); 
             }
 
-            System.out.println("Simulación finalizada. Cerrando conexión.");
-
-        } catch (IOException | InterruptedException e) {
-            System.err.println("Error en el cliente: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Error de conexión: " + e.getMessage());
+        } catch (InterruptedException e) {
+            System.err.println("Simulación interrumpida.");
+            Thread.currentThread().interrupt();
         }
+        
+        System.out.println("Simulación finalizada. Cerrando conexión.");
     }
 }
